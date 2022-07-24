@@ -1,0 +1,36 @@
+export interface BuildingSummary {
+    'bjdongcd'?: string;
+    'bldnm'?: string;
+    'block'?: string;
+    'bun'?: string;
+    'bylotcnt'?: number;
+    'createdAt'?: object;
+    'crtnday'?: string;
+    'guyukcd'?: string;
+    'guyukcdnm'?: string;
+    'id'?: number;
+    'ji'?: string;
+    'jigucd'?: string;
+    'jigucdnm'?: string;
+    'jiyukcd'?: string;
+    'jiyukcdnm'?: string;
+    'lot'?: string;
+    'mgmbldrgstpk'?: string;
+    'mgmupbldrgstpk'?: string;
+    'nabjdongcd'?: string;
+    'namainbun'?: number;
+    'naroadcd'?: string;
+    'nasubbun'?: number;
+    'naugrndcd'?: string;
+    'newplatplc'?: string;
+    'platgbcd'?: string;
+    'platplc'?: string;
+    'pnu'?: string;
+    'regstrgbcd'?: string;
+    'regstrgbcdnm'?: string;
+    'regstrkindcd'?: string;
+    'regstrkindcdnm'?: string;
+    'sigungucd'?: string;
+    'splotnm'?: string;
+    'updatedAt'?: object;
+}

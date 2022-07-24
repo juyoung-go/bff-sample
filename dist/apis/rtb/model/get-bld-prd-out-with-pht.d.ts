@@ -1,0 +1,32 @@
+import { GetBldPrdPhtOut } from './get-bld-prd-pht-out';
+export interface GetBldPrdOutWithPht {
+    'createUserDispName'?: string;
+    'dispYn': string;
+    'flrDispName': string;
+    'intRomCnt': number;
+    'intYn': string;
+    'mvinStatCd'?: string;
+    'mvinStatName'?: string;
+    'nlaPy': number;
+    'pht': Array<GetBldPrdPhtOut>;
+    'prdId': string;
+    'prdPhtgFailCorrCd'?: string;
+    'prdPhtgFailCorrName'?: string;
+    'prdPhtgFailCtn'?: string;
+    'prdPhtgFailDy'?: string;
+    'prdPhtgFailPtbId'?: string;
+    'prdPhtgFailPtbName'?: string;
+    'prdPhtgStatCd': string;
+    'prdPhtgStatName': string;
+    'prdTrStatCd'?: string;
+    'publicScrapYn': string;
+    'regDy': string;
+    'regUser': string;
+    'regUserDept': string;
+    'shofiYn': string;
+    'stdFlrMatchYn': string;
+    'updateDy'?: string;
+    'updateUser'?: string;
+    'updateUserDept'?: string;
+    'updateUserDispName'?: string;
+}

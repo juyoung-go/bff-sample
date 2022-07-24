@@ -1,0 +1,32 @@
+export interface PatchBselPrdRentrollIn {
+    'bldId'?: string;
+    'outId'?: string;
+    'seq'?: number;
+    'flrTypeCd'?: string;
+    'flrNum'?: number;
+    'lesseeName'?: string;
+    'vacancyYn'?: string;
+    'evctnPslbYn'?: string;
+    'nlaM2'?: number;
+    'nlaPy'?: number;
+    'glaM2'?: number;
+    'glaPy'?: number;
+    'dpstAmt'?: number;
+    'rentAmt'?: number;
+    'mtnFeeAmt'?: number;
+    'etcProfitAmt'?: number;
+    'rentIncRate'?: number;
+    'rentFeeIncRate'?: number;
+    'mtnFeePayFormCd'?: string;
+    'freeParkCnt'?: number;
+    'rentfreeMonth'?: number;
+    'fitoutMonth'?: number;
+    'tiAmt'?: number;
+    'midTermTermiCtn'?: string;
+    'contrStartDy'?: string;
+    'contRnwDy'?: string;
+    'contrEndDy'?: string;
+    'etcCtn'?: string;
+    'updateDt'?: string;
+    'updateUserId'?: string;
+}

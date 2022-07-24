@@ -1,0 +1,29 @@
+export interface LandCharacteristic {
+    'id'?: number;
+    'ladsn'?: number;
+    'ladusesittn'?: string;
+    'ladusesittnnm'?: string;
+    'lastupdtdt'?: string;
+    'ldcode'?: string;
+    'ldcodenm'?: string;
+    'lndcgrcode'?: string;
+    'lndcgrcodenm'?: string;
+    'lndpclar'?: number;
+    'mnnmslno'?: string;
+    'pblntfpclnd'?: number;
+    'pnu'?: string;
+    'prposarea1'?: string;
+    'prposarea2'?: string;
+    'prposareanm1'?: string;
+    'prposareanm2'?: string;
+    'regstrsecode'?: string;
+    'regstrsecodenm'?: string;
+    'roadsidecode'?: string;
+    'roadsidecodenm'?: string;
+    'stdrmt'?: number;
+    'stdryear'?: number;
+    'tpgrphfrmcode'?: string;
+    'tpgrphfrmcodenm'?: string;
+    'tpgrphhgcode'?: string;
+    'tpgrphhgcodenm'?: string;
+}

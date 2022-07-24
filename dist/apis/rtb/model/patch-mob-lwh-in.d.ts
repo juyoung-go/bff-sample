@@ -1,0 +1,36 @@
+import { GetAvailItemOut } from './get-avail-item-out';
+import { GetIcInfoOut } from './get-ic-info-out';
+export interface PatchMobLwhIn {
+    'lwhId'?: string;
+    'lwhName'?: string;
+    'whtypDclsId'?: Array<string>;
+    'lwhCfCd'?: string;
+    'lowTempTypeId'?: string;
+    'dangerLevTypeId'?: string;
+    'availItemTypeList'?: Array<GetAvailItemOut>;
+    'rentCfCd'?: string;
+    'paroTypeCd'?: string;
+    'costrStatCd'?: string;
+    'cmplCostrYear'?: string;
+    'rmdlYn'?: string;
+    'elvStatCd'?: string;
+    'frghtElvCnt'?: number;
+    'frghtElvWt'?: number;
+    'frghtElvSpd'?: number;
+    'icInfo'?: Array<GetIcInfoOut>;
+    'convCd'?: string;
+    'updateUserId'?: string;
+    'lwhUseTypeCd'?: string;
+    'rampCd'?: string;
+    'rampSideArea'?: number;
+    'dockCd'?: string;
+    'dockCnt'?: number;
+    'rackCd'?: string;
+    'rackCtn'?: string;
+    'cnpCd'?: string;
+    'wingCnt'?: number;
+    'berthTypeCd'?: string;
+    'plaM2'?: number;
+    'graM2'?: number;
+    'tenantName'?: string;
+}

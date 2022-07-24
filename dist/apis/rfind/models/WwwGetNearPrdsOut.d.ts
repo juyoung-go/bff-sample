@@ -1,0 +1,29 @@
+export default interface WwwGetNearPrdsOut {
+    addr?: string;
+    bldId?: string;
+    costrStatCd?: string;
+    dpstAmt?: number;
+    exteriorPht?: string;
+    glaM2?: number;
+    glaPy?: number;
+    interestYn?: string;
+    lat?: string;
+    lng?: string;
+    maintAmt?: number;
+    mtnFeeAmt?: number;
+    mtnFeeStat?: string;
+    nlaM2?: number;
+    nlaPy?: number;
+    prdChkDy?: string;
+    prdChkErnDd?: number;
+    prdCnt?: number;
+    prdId?: string;
+    publicScrapYn?: string;
+    recmdYn?: string;
+    rentAmt?: number;
+    sublineName?: string;
+    substaName?: string;
+    tourYn?: string;
+    unitId?: string;
+    wlkTimeMin?: number;
+}

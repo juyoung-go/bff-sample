@@ -1,0 +1,31 @@
+import { GetBldPrdPhtOut } from './get-bld-prd-pht-out';
+export interface GetMbrPrdListOut {
+    'addr'?: string;
+    'bldId': string;
+    'cmplCostrYear'?: string;
+    'exclYn': string;
+    'flrInfoDispName'?: string;
+    'nocAmt'?: number;
+    'nocInfoDispName'?: string;
+    'paroYn': string;
+    'pht': Array<GetBldPrdPhtOut>;
+    'phtExistYn': string;
+    'prdChkDy'?: string;
+    'prdChkErnDd'?: number;
+    'prdCnt': number;
+    'prdId': string;
+    'prdInfoDispName'?: string;
+    'prdInfoRedcDispName': string;
+    'prdTitle'?: string;
+    'prdTrStatCd'?: string;
+    'prdTrStatName'?: string;
+    'prsScrapYn'?: string;
+    'publicScrapYn'?: string;
+    'regDy': string;
+    'shofiYn': string;
+    'srpItemTgtRelCd': string;
+    'stdFlrNlaPy'?: string;
+    'substaName'?: string;
+    'substaWlkTimeMin'?: number;
+    'unitId': string;
+}

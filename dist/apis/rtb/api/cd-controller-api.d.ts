@@ -1,0 +1,62 @@
+import { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import { Configuration } from '../configuration';
+import { RequestArgs, BaseAPI } from '../base';
+import { ComCdOut } from '../model';
+import { GrpCdOut } from '../model';
+import { PagingGrpCdOut } from '../model';
+import { PatchCdIn } from '../model';
+import { PatchGrpCdIn } from '../model';
+import { SaveCdIn } from '../model';
+import { SaveGrpCdIn } from '../model';
+export declare const CdControllerApiAxiosParamCreator: (configuration?: Configuration) => {
+    deleteCode: (authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    deleteGroupCode: (authorization: string, comGrpCd?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getComCdList: (authorization: string, comGrpCd?: string, parGrpCd?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getGrpCd: (authorization: string, comGrpCd?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getGrpCdsPaging: (authorization: string, comGrpCd?: string, comGrpCdName?: string, expl?: string, orderBy?: string, pageNum?: number, pageSize?: number, parGrpCd?: string, parGrpCdExistYn?: string, useYn?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchCode: (authorization: string, comCd: string, comGrpCd: string, body: PatchCdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchCodeSeqDown: (authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchCodeSeqUp: (authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchGroupCode: (authorization: string, body: PatchGrpCdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postCode: (authorization: string, comCd: string, comGrpCd: string, body: SaveCdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postGroupCode: (authorization: string, body: SaveGrpCdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+};
+export declare const CdControllerApiFp: (configuration?: Configuration) => {
+    deleteCode(authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    deleteGroupCode(authorization: string, comGrpCd?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    getComCdList(authorization: string, comGrpCd?: string, parGrpCd?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ComCdOut>>>;
+    getGrpCd(authorization: string, comGrpCd?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GrpCdOut>>;
+    getGrpCdsPaging(authorization: string, comGrpCd?: string, comGrpCdName?: string, expl?: string, orderBy?: string, pageNum?: number, pageSize?: number, parGrpCd?: string, parGrpCdExistYn?: string, useYn?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagingGrpCdOut>>;
+    patchCode(authorization: string, comCd: string, comGrpCd: string, body: PatchCdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ComCdOut>>;
+    patchCodeSeqDown(authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    patchCodeSeqUp(authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    patchGroupCode(authorization: string, body: PatchGrpCdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GrpCdOut>>;
+    postCode(authorization: string, comCd: string, comGrpCd: string, body: SaveCdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ComCdOut>>;
+    postGroupCode(authorization: string, body: SaveGrpCdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GrpCdOut>>;
+};
+export declare const CdControllerApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    deleteCode(authorization: string, comCd: string, comGrpCd: string, options?: any): AxiosPromise<void>;
+    deleteGroupCode(authorization: string, comGrpCd?: string, options?: any): AxiosPromise<void>;
+    getComCdList(authorization: string, comGrpCd?: string, parGrpCd?: string, options?: any): AxiosPromise<Array<ComCdOut>>;
+    getGrpCd(authorization: string, comGrpCd?: string, options?: any): AxiosPromise<GrpCdOut>;
+    getGrpCdsPaging(authorization: string, comGrpCd?: string, comGrpCdName?: string, expl?: string, orderBy?: string, pageNum?: number, pageSize?: number, parGrpCd?: string, parGrpCdExistYn?: string, useYn?: string, options?: any): AxiosPromise<PagingGrpCdOut>;
+    patchCode(authorization: string, comCd: string, comGrpCd: string, body: PatchCdIn, options?: any): AxiosPromise<ComCdOut>;
+    patchCodeSeqDown(authorization: string, comCd: string, comGrpCd: string, options?: any): AxiosPromise<void>;
+    patchCodeSeqUp(authorization: string, comCd: string, comGrpCd: string, options?: any): AxiosPromise<void>;
+    patchGroupCode(authorization: string, body: PatchGrpCdIn, options?: any): AxiosPromise<GrpCdOut>;
+    postCode(authorization: string, comCd: string, comGrpCd: string, body: SaveCdIn, options?: any): AxiosPromise<ComCdOut>;
+    postGroupCode(authorization: string, body: SaveGrpCdIn, options?: any): AxiosPromise<GrpCdOut>;
+};
+export declare class CdControllerApi extends BaseAPI {
+    deleteCode(authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+    deleteGroupCode(authorization: string, comGrpCd?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+    getComCdList(authorization: string, comGrpCd?: string, parGrpCd?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComCdOut[], any>>;
+    getGrpCd(authorization: string, comGrpCd?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GrpCdOut, any>>;
+    getGrpCdsPaging(authorization: string, comGrpCd?: string, comGrpCdName?: string, expl?: string, orderBy?: string, pageNum?: number, pageSize?: number, parGrpCd?: string, parGrpCdExistYn?: string, useYn?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<PagingGrpCdOut, any>>;
+    patchCode(authorization: string, comCd: string, comGrpCd: string, body: PatchCdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComCdOut, any>>;
+    patchCodeSeqDown(authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+    patchCodeSeqUp(authorization: string, comCd: string, comGrpCd: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+    patchGroupCode(authorization: string, body: PatchGrpCdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GrpCdOut, any>>;
+    postCode(authorization: string, comCd: string, comGrpCd: string, body: SaveCdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComCdOut, any>>;
+    postGroupCode(authorization: string, body: SaveGrpCdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GrpCdOut, any>>;
+}

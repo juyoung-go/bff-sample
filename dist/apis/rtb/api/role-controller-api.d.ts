@@ -1,0 +1,60 @@
+import { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import { Configuration } from '../configuration';
+import { RequestArgs, BaseAPI } from '../base';
+import { ComRoleMenuMix } from '../model';
+import { ComRoleMenuRel } from '../model';
+import { ComRoleMst } from '../model';
+import { ComUserMst } from '../model';
+import { ComUserRoleRel } from '../model';
+import { PatchRoleIn } from '../model';
+import { RoleIn } from '../model';
+import { RoleMenuRelIn } from '../model';
+import { RoleUserRelIn } from '../model';
+export declare const RoleControllerApiAxiosParamCreator: (configuration?: Configuration) => {
+    _delete: (authorization: string, roleId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    addMenuToRole: (authorization: string, roleId: string, body: RoleMenuRelIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    addUserToRole: (authorization: string, roleId: string, body: RoleUserRelIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    deleteMenuFromRole: (authorization: string, menuId: string, relType: string, roleId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    deleteUserFromRole: (authorization: string, roleId: string, userId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getMenusByRole: (authorization: string, roleId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getRoles: (authorization: string, limit?: number, page?: number, roleId?: string, roleName?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getUsersByRole: (authorization: string, roleId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchRole1: (authorization: string, roleId: string, body: PatchRoleIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postRole1: (authorization: string, roleId: string, body: RoleIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+};
+export declare const RoleControllerApiFp: (configuration?: Configuration) => {
+    _delete(authorization: string, roleId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    addMenuToRole(authorization: string, roleId: string, body: RoleMenuRelIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ComRoleMenuRel>>;
+    addUserToRole(authorization: string, roleId: string, body: RoleUserRelIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ComUserRoleRel>>;
+    deleteMenuFromRole(authorization: string, menuId: string, relType: string, roleId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    deleteUserFromRole(authorization: string, roleId: string, userId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    getMenusByRole(authorization: string, roleId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ComRoleMenuMix>>>;
+    getRoles(authorization: string, limit?: number, page?: number, roleId?: string, roleName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ComRoleMst>>>;
+    getUsersByRole(authorization: string, roleId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<ComUserMst>>>;
+    patchRole1(authorization: string, roleId: string, body: PatchRoleIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ComRoleMst>>;
+    postRole1(authorization: string, roleId: string, body: RoleIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ComRoleMst>>;
+};
+export declare const RoleControllerApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    _delete(authorization: string, roleId: string, options?: any): AxiosPromise<number>;
+    addMenuToRole(authorization: string, roleId: string, body: RoleMenuRelIn, options?: any): AxiosPromise<ComRoleMenuRel>;
+    addUserToRole(authorization: string, roleId: string, body: RoleUserRelIn, options?: any): AxiosPromise<ComUserRoleRel>;
+    deleteMenuFromRole(authorization: string, menuId: string, relType: string, roleId: string, options?: any): AxiosPromise<number>;
+    deleteUserFromRole(authorization: string, roleId: string, userId: string, options?: any): AxiosPromise<number>;
+    getMenusByRole(authorization: string, roleId: string, options?: any): AxiosPromise<Array<ComRoleMenuMix>>;
+    getRoles(authorization: string, limit?: number, page?: number, roleId?: string, roleName?: string, options?: any): AxiosPromise<Array<ComRoleMst>>;
+    getUsersByRole(authorization: string, roleId: string, options?: any): AxiosPromise<Array<ComUserMst>>;
+    patchRole1(authorization: string, roleId: string, body: PatchRoleIn, options?: any): AxiosPromise<ComRoleMst>;
+    postRole1(authorization: string, roleId: string, body: RoleIn, options?: any): AxiosPromise<ComRoleMst>;
+};
+export declare class RoleControllerApi extends BaseAPI {
+    _delete(authorization: string, roleId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    addMenuToRole(authorization: string, roleId: string, body: RoleMenuRelIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComRoleMenuRel, any>>;
+    addUserToRole(authorization: string, roleId: string, body: RoleUserRelIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComUserRoleRel, any>>;
+    deleteMenuFromRole(authorization: string, menuId: string, relType: string, roleId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    deleteUserFromRole(authorization: string, roleId: string, userId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    getMenusByRole(authorization: string, roleId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComRoleMenuMix[], any>>;
+    getRoles(authorization: string, limit?: number, page?: number, roleId?: string, roleName?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComRoleMst[], any>>;
+    getUsersByRole(authorization: string, roleId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComUserMst[], any>>;
+    patchRole1(authorization: string, roleId: string, body: PatchRoleIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComRoleMst, any>>;
+    postRole1(authorization: string, roleId: string, body: RoleIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<ComRoleMst, any>>;
+}

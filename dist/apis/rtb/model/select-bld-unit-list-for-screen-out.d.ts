@@ -1,0 +1,37 @@
+import { GetUnitMvinClnOut } from './get-unit-mvin-cln-out';
+export interface SelectBldUnitListForScreenOut {
+    'bldId': string;
+    'createDt'?: string;
+    'createUserName': string;
+    'dgName'?: string;
+    'dgUseYn': string;
+    'eltcKw': number;
+    'exclRate': number;
+    'exhaustAirYn': string;
+    'flrHeightM': number;
+    'flrMainUsage': string;
+    'flrNum'?: number;
+    'glaM2': number;
+    'glaPy': number;
+    'manWcCnt'?: number;
+    'mvinClnList': Array<GetUnitMvinClnOut>;
+    'nlaM2': number;
+    'nlaPy': number;
+    'prdCnt': number;
+    'prdRegYn': string;
+    'shofiYn': string;
+    'supplyAirYn': string;
+    'topFlrYn': string;
+    'unisexWcCnt'?: number;
+    'unitCfCd': string;
+    'unitCfName': string;
+    'unitDispName': string;
+    'unitFaceCd': string;
+    'unitId': string;
+    'unitName'?: string;
+    'unitSideCd': string;
+    'unitlctName': string;
+    'updateDt'?: string;
+    'updateUserName': string;
+    'womanWcCnt'?: number;
+}

@@ -1,0 +1,29 @@
+export default interface WwwGetBldUnitOut {
+    contrImmYn?: string;
+    dgName?: string;
+    dpstAmt?: number;
+    flrNum?: number;
+    glaM2?: number;
+    glaPy?: number;
+    intYn?: string;
+    interestYn?: string;
+    lmh?: string;
+    maintAmt?: number;
+    manWcCnt?: number;
+    mtnFeeAmt?: number;
+    mtnFeeStatName?: string;
+    mvinStatCd?: string;
+    mvinStatName?: string;
+    nlaM2?: number;
+    nlaPy?: number;
+    otherUnitName?: string;
+    phtCnt?: number;
+    prdId: string;
+    rentAmt?: number;
+    tourYn?: string;
+    unisexWcCnt?: number;
+    unitCfCd?: string;
+    unitCfName?: string;
+    unitName?: string;
+    womanWcCnt?: number;
+}

@@ -1,0 +1,60 @@
+import { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import { Configuration } from '../configuration';
+import { RequestArgs, BaseAPI } from '../base';
+import { GetSsptOut } from '../model';
+import { GtdTaskMst } from '../model';
+import { PagingGetAllSsptListOut } from '../model';
+import { PagingGetSsptAsgmtOut } from '../model';
+import { PatchSsptAsgmtIn } from '../model';
+import { PatchSsptIn } from '../model';
+import { PatchSsptProcIn } from '../model';
+import { SaveSsptAsgmtIn } from '../model';
+import { SaveSsptIn } from '../model';
+export declare const SsptControllerApiAxiosParamCreator: (configuration?: Configuration) => {
+    deleteSspt: (authorization: string, taskId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    deleteSsptAsgmt: (authorization: string, taskId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getAllSsptListPaging: (authorization: string, maxNlaPy?: number, maxReqDt?: string, minNlaPy?: number, minReqDt?: string, orderBy?: string, pageNum?: number, pageSize?: number, procStat?: string, procUserId?: string, reqUserId?: string, ssptRegnCd?: string, ssptTaskTypeCd?: string, ssptWorkCfCd?: string, taskName?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getSspt: (authorization: string, taskId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getSsptAsgmtList: (authorization: string, orderBy?: string, pageNum?: number, pageSize?: number, taskId?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchSspt: (authorization: string, input: PatchSsptIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchSsptAsgmt: (authorization: string, input: PatchSsptAsgmtIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchSsptProc: (authorization: string, input: PatchSsptProcIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postSspt: (authorization: string, input: SaveSsptIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postSsptAsgmt: (authorization: string, input: SaveSsptAsgmtIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+};
+export declare const SsptControllerApiFp: (configuration?: Configuration) => {
+    deleteSspt(authorization: string, taskId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    deleteSsptAsgmt(authorization: string, taskId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    getAllSsptListPaging(authorization: string, maxNlaPy?: number, maxReqDt?: string, minNlaPy?: number, minReqDt?: string, orderBy?: string, pageNum?: number, pageSize?: number, procStat?: string, procUserId?: string, reqUserId?: string, ssptRegnCd?: string, ssptTaskTypeCd?: string, ssptWorkCfCd?: string, taskName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagingGetAllSsptListOut>>;
+    getSspt(authorization: string, taskId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetSsptOut>>;
+    getSsptAsgmtList(authorization: string, orderBy?: string, pageNum?: number, pageSize?: number, taskId?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PagingGetSsptAsgmtOut>>;
+    patchSspt(authorization: string, input: PatchSsptIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetSsptOut>>;
+    patchSsptAsgmt(authorization: string, input: PatchSsptAsgmtIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    patchSsptProc(authorization: string, input: PatchSsptProcIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetSsptOut>>;
+    postSspt(authorization: string, input: SaveSsptIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GtdTaskMst>>;
+    postSsptAsgmt(authorization: string, input: SaveSsptAsgmtIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+};
+export declare const SsptControllerApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    deleteSspt(authorization: string, taskId: string, options?: any): AxiosPromise<void>;
+    deleteSsptAsgmt(authorization: string, taskId: string, options?: any): AxiosPromise<number>;
+    getAllSsptListPaging(authorization: string, maxNlaPy?: number, maxReqDt?: string, minNlaPy?: number, minReqDt?: string, orderBy?: string, pageNum?: number, pageSize?: number, procStat?: string, procUserId?: string, reqUserId?: string, ssptRegnCd?: string, ssptTaskTypeCd?: string, ssptWorkCfCd?: string, taskName?: string, options?: any): AxiosPromise<PagingGetAllSsptListOut>;
+    getSspt(authorization: string, taskId: string, options?: any): AxiosPromise<GetSsptOut>;
+    getSsptAsgmtList(authorization: string, orderBy?: string, pageNum?: number, pageSize?: number, taskId?: string, options?: any): AxiosPromise<PagingGetSsptAsgmtOut>;
+    patchSspt(authorization: string, input: PatchSsptIn, options?: any): AxiosPromise<GetSsptOut>;
+    patchSsptAsgmt(authorization: string, input: PatchSsptAsgmtIn, options?: any): AxiosPromise<number>;
+    patchSsptProc(authorization: string, input: PatchSsptProcIn, options?: any): AxiosPromise<GetSsptOut>;
+    postSspt(authorization: string, input: SaveSsptIn, options?: any): AxiosPromise<GtdTaskMst>;
+    postSsptAsgmt(authorization: string, input: SaveSsptAsgmtIn, options?: any): AxiosPromise<number>;
+};
+export declare class SsptControllerApi extends BaseAPI {
+    deleteSspt(authorization: string, taskId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+    deleteSsptAsgmt(authorization: string, taskId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    getAllSsptListPaging(authorization: string, maxNlaPy?: number, maxReqDt?: string, minNlaPy?: number, minReqDt?: string, orderBy?: string, pageNum?: number, pageSize?: number, procStat?: string, procUserId?: string, reqUserId?: string, ssptRegnCd?: string, ssptTaskTypeCd?: string, ssptWorkCfCd?: string, taskName?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<PagingGetAllSsptListOut, any>>;
+    getSspt(authorization: string, taskId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GetSsptOut, any>>;
+    getSsptAsgmtList(authorization: string, orderBy?: string, pageNum?: number, pageSize?: number, taskId?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<PagingGetSsptAsgmtOut, any>>;
+    patchSspt(authorization: string, input: PatchSsptIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GetSsptOut, any>>;
+    patchSsptAsgmt(authorization: string, input: PatchSsptAsgmtIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    patchSsptProc(authorization: string, input: PatchSsptProcIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GetSsptOut, any>>;
+    postSspt(authorization: string, input: SaveSsptIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GtdTaskMst, any>>;
+    postSsptAsgmt(authorization: string, input: SaveSsptAsgmtIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+}

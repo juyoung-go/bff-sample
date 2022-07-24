@@ -1,0 +1,33 @@
+import { GetUnitMvinClnOut } from './get-unit-mvin-cln-out';
+export interface GetUnitForModalOut {
+    'bldId': string;
+    'createDt'?: string;
+    'createUserName': string;
+    'dgName'?: string;
+    'dgUseYn': string;
+    'eltcKw': number;
+    'exclRate': number;
+    'exhaustAirYn': string;
+    'flrHeightM': number;
+    'flrNum': number;
+    'glaM2': number;
+    'glaPy': number;
+    'hoFaceName': string;
+    'mvinClnList': Array<GetUnitMvinClnOut>;
+    'nlaM2': number;
+    'nlaPy': number;
+    'prdCnt': number;
+    'prdRegYn': string;
+    'shofiYn': string;
+    'supplyAirYn': string;
+    'topFlrYn': string;
+    'unitCfCd': string;
+    'unitCfName': string;
+    'unitDispName': string;
+    'unitFaceCd': string;
+    'unitId': string;
+    'unitName'?: string;
+    'unitSideCd': string;
+    'updateDt'?: string;
+    'updateUserName': string;
+}

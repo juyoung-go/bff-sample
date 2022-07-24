@@ -1,0 +1,35 @@
+export interface BuildingOwn {
+    'area'?: number;
+    'bjdongCd'?: string;
+    'bjdongNm'?: string;
+    'bldNm'?: string;
+    'block'?: string;
+    'bun'?: string;
+    'createdAt'?: object;
+    'dongNm'?: string;
+    'hoNm'?: string;
+    'id'?: number;
+    'ji'?: string;
+    'lot'?: string;
+    'mgmbldrgstpk'?: string;
+    'naBjdongCd'?: string;
+    'naMainBun'?: string;
+    'naPlatPlc'?: string;
+    'naRoadCd'?: string;
+    'naSubBun'?: string;
+    'naUgrndCd'?: string;
+    'naUgrndNm'?: string;
+    'ownGbCd'?: string;
+    'ownGbNm'?: string;
+    'platGbCd'?: string;
+    'platGbNm'?: string;
+    'pnu'?: string;
+    'regstrGbCd'?: string;
+    'regstrGbNm'?: string;
+    'regstrKindCd'?: string;
+    'regstrKindNm'?: string;
+    'sigunguCd'?: string;
+    'sigunguNm'?: string;
+    'splotNm'?: string;
+    'updatedAt'?: object;
+}

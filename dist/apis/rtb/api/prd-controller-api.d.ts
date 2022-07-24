@@ -1,0 +1,65 @@
+import { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
+import { Configuration } from '../configuration';
+import { RequestArgs, BaseAPI } from '../base';
+import { GetMonthlyTotalOut } from '../model';
+import { GetPrdListForPhtUploadOut } from '../model';
+import { GetPrdPhtForBldScreenOut } from '../model';
+import { PatchMobPrdIn } from '../model';
+import { PatchPrdForBldScreenModalIn } from '../model';
+import { PatchPrdForPhtUploadModalIn } from '../model';
+import { PatchPrdIn } from '../model';
+import { PatchPrdPhtStatIn } from '../model';
+import { PostPrdIn } from '../model';
+import { PrdPrdMst } from '../model';
+export declare const PrdControllerApiAxiosParamCreator: (configuration?: Configuration) => {
+    deletePrd: (authorization: string, prdId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getMonthlyTotal: (authorization: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getPrdListForPhtUpload: (authorization: string, bldId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getPrdPhtForBldScreen: (authorization: string, prdId: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchMobPrd: (authorization: string, prdId: string, input: PatchMobPrdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchPrd: (authorization: string, prdId: string, input: PatchPrdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchPrdForBldScreenModal: (authorization: string, prdId: string, input: PatchPrdForBldScreenModalIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchPrdForPhtUploadModal: (authorization: string, prdId: string, input: PatchPrdForPhtUploadModalIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    patchPrdPhtState: (authorization: string, input: PatchPrdPhtStatIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postPeriodTotal: (authorization: string, endDate?: string, startDate?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    postPrd: (authorization: string, input: PostPrdIn, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+};
+export declare const PrdControllerApiFp: (configuration?: Configuration) => {
+    deletePrd(authorization: string, prdId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    getMonthlyTotal(authorization: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetMonthlyTotalOut>>>;
+    getPrdListForPhtUpload(authorization: string, bldId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetPrdListForPhtUploadOut>>>;
+    getPrdPhtForBldScreen(authorization: string, prdId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<GetPrdPhtForBldScreenOut>>>;
+    patchMobPrd(authorization: string, prdId: string, input: PatchMobPrdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrdPrdMst>>;
+    patchPrd(authorization: string, prdId: string, input: PatchPrdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrdPrdMst>>;
+    patchPrdForBldScreenModal(authorization: string, prdId: string, input: PatchPrdForBldScreenModalIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<PrdPrdMst>>;
+    patchPrdForPhtUploadModal(authorization: string, prdId: string, input: PatchPrdForPhtUploadModalIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+    patchPrdPhtState(authorization: string, input: PatchPrdPhtStatIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    postPeriodTotal(authorization: string, endDate?: string, startDate?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
+    postPrd(authorization: string, input: PostPrdIn, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<number>>;
+};
+export declare const PrdControllerApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    deletePrd(authorization: string, prdId: string, options?: any): AxiosPromise<number>;
+    getMonthlyTotal(authorization: string, options?: any): AxiosPromise<Array<GetMonthlyTotalOut>>;
+    getPrdListForPhtUpload(authorization: string, bldId: string, options?: any): AxiosPromise<Array<GetPrdListForPhtUploadOut>>;
+    getPrdPhtForBldScreen(authorization: string, prdId: string, options?: any): AxiosPromise<Array<GetPrdPhtForBldScreenOut>>;
+    patchMobPrd(authorization: string, prdId: string, input: PatchMobPrdIn, options?: any): AxiosPromise<PrdPrdMst>;
+    patchPrd(authorization: string, prdId: string, input: PatchPrdIn, options?: any): AxiosPromise<PrdPrdMst>;
+    patchPrdForBldScreenModal(authorization: string, prdId: string, input: PatchPrdForBldScreenModalIn, options?: any): AxiosPromise<PrdPrdMst>;
+    patchPrdForPhtUploadModal(authorization: string, prdId: string, input: PatchPrdForPhtUploadModalIn, options?: any): AxiosPromise<number>;
+    patchPrdPhtState(authorization: string, input: PatchPrdPhtStatIn, options?: any): AxiosPromise<void>;
+    postPeriodTotal(authorization: string, endDate?: string, startDate?: string, options?: any): AxiosPromise<string>;
+    postPrd(authorization: string, input: PostPrdIn, options?: any): AxiosPromise<number>;
+};
+export declare class PrdControllerApi extends BaseAPI {
+    deletePrd(authorization: string, prdId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    getMonthlyTotal(authorization: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GetMonthlyTotalOut[], any>>;
+    getPrdListForPhtUpload(authorization: string, bldId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GetPrdListForPhtUploadOut[], any>>;
+    getPrdPhtForBldScreen(authorization: string, prdId: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<GetPrdPhtForBldScreenOut[], any>>;
+    patchMobPrd(authorization: string, prdId: string, input: PatchMobPrdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<PrdPrdMst, any>>;
+    patchPrd(authorization: string, prdId: string, input: PatchPrdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<PrdPrdMst, any>>;
+    patchPrdForBldScreenModal(authorization: string, prdId: string, input: PatchPrdForBldScreenModalIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<PrdPrdMst, any>>;
+    patchPrdForPhtUploadModal(authorization: string, prdId: string, input: PatchPrdForPhtUploadModalIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+    patchPrdPhtState(authorization: string, input: PatchPrdPhtStatIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<void, any>>;
+    postPeriodTotal(authorization: string, endDate?: string, startDate?: string, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<string, any>>;
+    postPrd(authorization: string, input: PostPrdIn, options?: AxiosRequestConfig): Promise<import("axios").AxiosResponse<number, any>>;
+}

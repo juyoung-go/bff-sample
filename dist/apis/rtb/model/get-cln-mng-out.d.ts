@@ -1,0 +1,37 @@
+import { GetClnBselPrfAreaOut } from './get-cln-bsel-prf-area-out';
+export interface GetClnMngOut {
+    'bselEsaPy'?: number;
+    'bselMngCf'?: string;
+    'bselMngCfCd'?: string;
+    'bselMngCtn'?: string;
+    'bselMngLev'?: string;
+    'bselMngLevCd'?: string;
+    'bselPrfArea'?: Array<GetClnBselPrfAreaOut>;
+    'clnExpl'?: string;
+    'clnId': string;
+    'clnName': string;
+    'coMngLev'?: string;
+    'coMngLevCd'?: string;
+    'coldCallUserId'?: string;
+    'coldCallUserName'?: string;
+    'esaPy'?: number;
+    'expectMoveDy'?: string;
+    'lwhEsaPyCd'?: string;
+    'lwhEsaPyCdName'?: string;
+    'lwhMngCf'?: string;
+    'lwhMngCfCd'?: string;
+    'lwhMngCtn'?: string;
+    'lwhMngLev'?: string;
+    'lwhMngLevCd'?: string;
+    'mngExceptTgt'?: string;
+    'mngExceptTgtCd'?: string;
+    'mngExceptTgtYn'?: string;
+    'retailEsaPy'?: number;
+    'retailIndustryLargeCd'?: string;
+    'retailIndustryLargeName'?: string;
+    'retailIndustryMiddleCd'?: string;
+    'retailIndustryMiddleName'?: string;
+    'retailMngCtn'?: string;
+    'retailMngLev'?: string;
+    'retailMngLevCd'?: string;
+}

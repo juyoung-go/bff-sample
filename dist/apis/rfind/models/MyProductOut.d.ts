@@ -1,0 +1,29 @@
+export default interface MyProductOut {
+    address?: string;
+    aircon_type?: string;
+    building_complex_name?: string;
+    check_product_at?: string;
+    deposit?: number;
+    elevator?: string;
+    favorite_at?: string;
+    floor?: number;
+    id?: string;
+    interior?: string;
+    maintenance_cost?: number;
+    maintenance_cost_status?: string;
+    monthly_rent?: number;
+    parking_lot_type?: string;
+    photo?: string;
+    product_id: string;
+    product_status?: string;
+    real_area?: number;
+    recommendated_at?: string;
+    rent_area?: number;
+    rent_location?: string;
+    subway_line?: string;
+    subway_name?: string;
+    time_spent_min?: number;
+    tour_at?: string;
+    tour_id?: string;
+    unit_name?: string;
+}

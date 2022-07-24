@@ -1,0 +1,31 @@
+import { GetUnitMvinClnOut } from './get-unit-mvin-cln-out';
+export interface SelectLwhUnitListForScreenOut {
+    'convTypeCdList': string;
+    'createDt'?: string;
+    'createUserName': string;
+    'dgName'?: string;
+    'dgUseYn'?: string;
+    'exclRate': number;
+    'flrHeightM': number;
+    'flrNum'?: number;
+    'flrStrKnm2': number;
+    'flrUseTypeCd': string;
+    'flrUseTypeName': string;
+    'glaM2': number;
+    'glaPy': number;
+    'lwhId': string;
+    'mvinClnList': Array<GetUnitMvinClnOut>;
+    'nlaM2': number;
+    'nlaPy': number;
+    'prdCnt': number;
+    'prdRegYn': string;
+    'storeTypeCd': string;
+    'storeTypeName': string;
+    'unitCfCd': string;
+    'unitCfName': string;
+    'unitDispName': string;
+    'unitLwhId': string;
+    'unitName'?: string;
+    'updateDt'?: string;
+    'updateUserName': string;
+}

@@ -1,0 +1,31 @@
+export interface PatchIntProjIn {
+    'projName'?: string;
+    'projProgsCd'?: string;
+    'erpContrNum'?: string;
+    'bidStatCd'?: string;
+    'rvlcoName'?: string;
+    'projRngeCd'?: string;
+    'spaUseCd'?: string;
+    'spaUseDtlCd'?: string;
+    'bldAddr'?: string;
+    'flrDtl'?: string;
+    'bldId'?: string;
+    'spotRealYn'?: string;
+    'areaPy'?: number;
+    'areaDtl'?: string;
+    'initInflDy'?: string;
+    'costrExpectAmt'?: number;
+    'projContrTypeCd'?: string;
+    'cusTypeCd'?: string;
+    'costrStartDy'?: string;
+    'costrEndDy'?: string;
+    'existCoName'?: string;
+    'relCoName'?: string;
+    'bidTypeCd'?: string;
+    'bizRoutCd'?: string;
+    'costrPurpCd'?: string;
+    'projDeptCd'?: string;
+    'suplDrwYn'?: string;
+    'bidStrgDtl'?: string;
+    'resDtl'?: string;
+}

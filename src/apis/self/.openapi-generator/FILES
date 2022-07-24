@@ -1,0 +1,15 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+api.ts
+api/retail-controller-api.ts
+api/version-controller-api.ts
+base.ts
+common.ts
+configuration.ts
+git_push.sh
+index.ts
+model/index.ts
+model/my-body-element.ts
+model/my-body.ts
+model/my-body2.ts

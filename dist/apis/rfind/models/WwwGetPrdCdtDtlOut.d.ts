@@ -1,0 +1,29 @@
+export default interface WwwGetPrdCdtDtlOut {
+    acHeatCd?: string;
+    acSplyTypeCd?: string;
+    acSplyTypeName?: string;
+    createDt: string;
+    createUserId?: string;
+    cylYnt?: number;
+    elvExistCd?: string;
+    elvExistName?: string;
+    etcCtn?: string;
+    expectRegnCtn?: string;
+    flrOptCd?: string;
+    flrOptName?: string;
+    heatSplyTypeCd?: string;
+    heatSplyTypeName?: string;
+    intCd?: string;
+    intName?: string;
+    maxMonthFixAmt?: number;
+    maxNlaPy?: number;
+    mbrId: string;
+    minMonthFixAmt?: number;
+    minNlaPy?: number;
+    moveExpectDy?: string;
+    pkltTypeCd?: string;
+    pkltTypeName?: string;
+    updateDt?: string;
+    updateUserId?: string;
+    wlkTimeMin?: number;
+}

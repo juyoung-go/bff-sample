@@ -1,0 +1,30 @@
+export interface GetBselPrdRentrollOut {
+    'bldId'?: string;
+    'contRnwDy'?: string;
+    'contrEndDy'?: string;
+    'contrStartDy'?: string;
+    'createDt'?: string;
+    'createUserId'?: string;
+    'createUserName'?: string;
+    'dpstAmt'?: number;
+    'etcCtn'?: string;
+    'evctnPslbYn'?: string;
+    'flrNum'?: string;
+    'flrType'?: string;
+    'flrTypeCd'?: string;
+    'glaM2'?: number;
+    'glaPy'?: number;
+    'lesseeName'?: string;
+    'mtnFeeAmt'?: number;
+    'nlaM2'?: number;
+    'nlaPy'?: number;
+    'outId'?: string;
+    'rentAmt'?: number;
+    'rentfreeMonth'?: number;
+    'seq'?: number;
+    'sysId'?: string;
+    'updateDt'?: string;
+    'updateUserId'?: string;
+    'updateUserName'?: string;
+    'vacancyYn'?: string;
+}

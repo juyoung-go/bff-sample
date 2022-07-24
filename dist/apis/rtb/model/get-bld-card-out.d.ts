@@ -1,0 +1,31 @@
+import { GetPhtForBldPrdSearchCardOut } from './get-pht-for-bld-prd-search-card-out';
+export interface GetBldCardOut {
+    'bldId': string;
+    'bldTitle': string;
+    'bsmtCnt'?: number;
+    'cmplCostrYear': string;
+    'dpstAmt': number;
+    'exclBldYn': string;
+    'flrCnt'?: number;
+    'glaPy': number;
+    'lat': number;
+    'lng': number;
+    'maintAmt': number;
+    'nlaPy': number;
+    'nocAmt': number;
+    'paroYn': string;
+    'phtList': Array<GetPhtForBldPrdSearchCardOut>;
+    'prdChkErnDd'?: number;
+    'prdCnt': number;
+    'prdCntForMap': number;
+    'prdId': string;
+    'prsScrapYn': string;
+    'publicScrapYn': string;
+    'rentAmt': number;
+    'shofiYn': string;
+    'stdFlrNlaPy'?: number;
+    'substaName'?: string;
+    'unit': string;
+    'unitId': string;
+    'wlkTimeMin'?: number;
+}

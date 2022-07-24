@@ -1,0 +1,29 @@
+export interface GetIntProjDtlOut {
+    'bidRegYn'?: string;
+    'bidSbmsCtn'?: string;
+    'bidSbmsDt'?: string;
+    'bldClosStsDtl'?: string;
+    'bldCostrCdtDtl'?: string;
+    'eitCdtDtl'?: string;
+    'eitExcpCtn'?: string;
+    'eitIncldCd'?: Array<string>;
+    'eitIncldCdName'?: string;
+    'eitIncldCtn'?: string;
+    'eitRegYn'?: string;
+    'eitType'?: string;
+    'eitTypeCd'?: string;
+    'insJoinCdt'?: string;
+    'judgeName'?: string;
+    'optItemDtl'?: string;
+    'projId'?: string;
+    'ptAvailTime'?: string;
+    'ptDt'?: string;
+    'ptMat'?: string;
+    'qstnResPerdCtn'?: string;
+    'sbmsTgtName'?: string;
+    'sbmsWay'?: string;
+    'sbmsWayCd'?: string;
+    'sitePtDt'?: string;
+    'slctStdCtn'?: string;
+    'vatClnAmt'?: number;
+}

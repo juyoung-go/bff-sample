@@ -1,0 +1,38 @@
+import { GetPmtInfo } from './get-pmt-info';
+import { GetPtbInfo } from './get-ptb-info';
+export interface PostContrIn {
+    'dealId'?: string;
+    'ldealId'?: string;
+    'contrTypeCd'?: string;
+    'contrNum'?: string;
+    'dealInflCd'?: string;
+    'prdId'?: string;
+    'glaPy'?: number;
+    'glaM2'?: number;
+    'nlaPy'?: number;
+    'nlaM2'?: number;
+    'contrRentPtb'?: Array<GetPtbInfo>;
+    'contrLeasePtb'?: Array<GetPtbInfo>;
+    'contrDy'?: string;
+    'contrAmt'?: number;
+    'contrPmtExpectDy'?: string;
+    'contrPmtAmt'?: number;
+    'midPmtList'?: Array<GetPmtInfo>;
+    'balancePmtExpectDy'?: string;
+    'balancePmtAmt'?: number;
+    'contrStartDy'?: string;
+    'contrEndDy'?: string;
+    'dpstAmt'?: number;
+    'rentPayDd'?: number;
+    'rentPayTypeCd'?: string;
+    'rentAmt'?: number;
+    'maintFeeIncldYn'?: string;
+    'maintFeePayDd'?: number;
+    'maintFeeAmt'?: number;
+    'maintFeePayTypeCd'?: string;
+    'intDtl'?: string;
+    'notiTermMonth'?: number;
+    'spcContrCtn'?: string;
+    'recIncldYn'?: string;
+    'premiumAmt'?: number;
+}

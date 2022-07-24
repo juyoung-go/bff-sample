@@ -1,0 +1,34 @@
+export interface GetClnMngTeamOut {
+    'afltBizMngPtbId'?: string;
+    'afltBizTeamMngYn'?: string;
+    'afltUserName'?: string;
+    'bselMngPtbId'?: string;
+    'bselTeamMngYn'?: string;
+    'bselUserName'?: string;
+    'clnId': string;
+    'clnName': string;
+    'corpSalMngPtbId'?: string;
+    'corpSalTeamMngYn': string;
+    'corpSalUserName'?: string;
+    'finnMngPtbId'?: string;
+    'finnTeamMngYn': string;
+    'finnUserName'?: string;
+    'furMngPtbId'?: string;
+    'furTeamMngYn'?: string;
+    'furUserName'?: string;
+    'intMngPtbId'?: string;
+    'intTeamMngYn'?: string;
+    'intUserName'?: string;
+    'lmMngPtbId'?: string;
+    'lmTeamMngYn': string;
+    'lmUserName'?: string;
+    'lwhMngPtbId'?: string;
+    'lwhTeamMngYn'?: string;
+    'lwhUserName'?: string;
+    'mktMngPtbId'?: string;
+    'mktTeamMngYn': string;
+    'mktUserName'?: string;
+    'retailMngPtbId'?: string;
+    'retailTeamMngYn'?: string;
+    'retailUserName'?: string;
+}

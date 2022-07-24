@@ -1,0 +1,34 @@
+import { Geojson } from './geojson';
+import { GetPhtForBldPrdSearchCardOut } from './get-pht-for-bld-prd-search-card-out';
+export interface GetBselPrdForMapOut {
+    'addr'?: string;
+    'addrS'?: string;
+    'blaPy'?: number;
+    'bldId'?: string;
+    'bldMainPurpsName'?: string;
+    'bldName': string;
+    'bldPhtOut'?: Array<GetPhtForBldPrdSearchCardOut>;
+    'bselPrdTypeName': string;
+    'bsmtCnt'?: number;
+    'center': Geojson;
+    'curExpectRoiRate'?: number;
+    'dpstAmt': number;
+    'fitPurpsName': string;
+    'flrCnt'?: number;
+    'fullExpectRoiRate'?: number;
+    'govDocId': string;
+    'graPerPy': number;
+    'graPy'?: number;
+    'grdName': string;
+    'maxDsrdSlgPrc': number;
+    'mtnFeeAmt': number;
+    'plaPerPy': number;
+    'plaPy'?: number;
+    'pnu': string;
+    'prdBselId': string;
+    'progsStatCd': string;
+    'progsStatName': string;
+    'ptbName'?: string;
+    'rentAmt': number;
+    'tipRegDy'?: string;
+}

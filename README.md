@@ -80,7 +80,8 @@ $ npm run rcodegen:rfind
 |    |    ├ guards (nest guard)
 |    |    ├ interceptors (nest interceptor)
 |    . . .
-|    main.ts   // nest main entry point
+|    app.module.ts  // root module (application 최상단 모듈)
+|    main.ts        // nest main entry point
 ├ test
 
 codegen.option.json   //codegen option (for openapi-generator)

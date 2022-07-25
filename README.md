@@ -55,11 +55,27 @@ $ npm run rcodegen:rfind
 - 현재 OpenApi 3.0 만 지원
 - axios 베이스
 
-## Nest Project Structure
+## Project Structure
 ```
 ├ build
+|    ├ codegen //rcodegen 빌드 스크립트
 ├ src
+|    ├ apis    //호출 타겟 서버별 api
+|    |    ├ (가칭 rtb-xxx)
+|    |    ├ (가칭 rtb-yyy)
+|    |    ├ . . .
+|    ├ common  // 프로젝트 공통
+|    ├ modules // nest 모듈 (중계 대상의 성격별 controller 모음)
+|    |    ├ core // 서버의 기본 공통 api (버전, health check 등...)
+|    |    ├ (가칭 rtb-collect-info-common)
+|    |    ├ (가칭 rtb-collect-info-pc)
+|    |    ├ (가칭 rtb-collect-info-mobile)
+|    |    ├ . . .
+|    ├ nest    // nest 관련 요소의 모음
+|    . . .
+|    main.ts   // nest main entry point
 ├ test
+
 codegen.option.json   //codegen option (for openapi-generator)
 Dockerfile            //docker image
 nest-cli.json         //nest 설정

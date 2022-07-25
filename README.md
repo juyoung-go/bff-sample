@@ -65,13 +65,20 @@ $ npm run rcodegen:rfind
 |    |    ├ (가칭 rtb-yyy)
 |    |    ├ . . .
 |    ├ common  // 프로젝트 공통
+|    |    ├ axios  //axios 셋업. request/response 전후처리 (토큰, 공통 예외처리 등..)
+|    |    ├ header //공통 header 관련
+|    |    ├ util   //유틸
 |    ├ modules // nest 모듈 (중계 대상의 성격별 controller 모음)
 |    |    ├ core // 서버의 기본 공통 api (버전, health check 등...)
 |    |    ├ (가칭 rtb-collect-info-common)
 |    |    ├ (가칭 rtb-collect-info-pc)
 |    |    ├ (가칭 rtb-collect-info-mobile)
 |    |    ├ . . .
-|    ├ nest    // nest 관련 요소의 모음
+|    ├ nest  // nest 관련 요소의 모음
+|    |    ├ dev
+|    |    |    ├ base (개발 베이스 클래스 모음)
+|    |    ├ guards (nest guard)
+|    |    ├ interceptors (nest interceptor)
 |    . . .
 |    main.ts   // nest main entry point
 ├ test

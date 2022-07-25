@@ -1,5 +1,5 @@
 
-  <p align="center">RSQUARE BFF<a href="https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture" target="_blank">(Backend For Frontend)</a> For Global RTB
+  <p align="center"><a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="15" alt="Nest Logo" /></a> RSQUARE BFF<a href="https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture" target="_blank">(Backend For Frontend)</a> For Global RTB
     <p align="center">
 
 ## Description

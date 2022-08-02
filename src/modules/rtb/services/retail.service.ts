@@ -14,6 +14,7 @@ export class RetailService extends BaseService {
 
   async getProductDetail(bldId: string): Promise<string> {
 
+    let mock
     const out = await new BldControllerApi().selectBldPrdListForScreen(
       '',
       bldId

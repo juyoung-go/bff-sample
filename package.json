@@ -23,7 +23,7 @@
     "codegen:rfind": "rm -rf ./src/apis/rfind & openapi-generator-cli generate -i https://rfind-api-int.rsquare.co.kr/v3/api-docs -o src/apis/rfind -g typescript-nestjs -c codegen.option.json",
     "codegen:self": "rm -rf ./src/apis/self & openapi-generator-cli generate -i http://localhost:3000/api-json -o src/apis/self -g typescript-axios -c codegen.option.json",
     "rcodegen:rfind": "node ./build/codegen/build -i https://rfind-api-int.rsquare.co.kr/v3/api-docs -o src/apis/rfind -c rcodegen.config.json",
-    "rcodegen:rtb": "node ./build/codegen/build -i https://manage-api-dev.rsquare.co.kr/v2/api-docs -o src/apis/rtb"
+    "rcodegen:rtb": "node ./build/codegen/build -i https://eng.rsquarecompany.com/v3/api-docs -o src/apis/rtb -c rcodegen.config.json"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.2",

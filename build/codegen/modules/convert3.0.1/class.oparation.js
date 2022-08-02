@@ -43,6 +43,13 @@ module.exports = class OperationInfo {
 
   }
 
+  validProperty(param){
+    if(param && param.in === 'header'){
+      return false
+    }
+    return true
+  }
+
   convertParameter(){
 
     let str = ''
@@ -51,6 +58,8 @@ module.exports = class OperationInfo {
       let typeStr
       this.parameters.sort((a, b)=>a.required < b.required?1:-1)
       for(const param of this.parameters){
+
+        if(!this.validProperty(param)) continue
   
         typeStr = new ParamProperty(param)
         
@@ -62,7 +71,9 @@ module.exports = class OperationInfo {
   
       }
 
-    }else if(this.requestBody){
+    }
+    
+    if(this.requestBody){
       
       const {content} = this.requestBody
       if(!content) throw new Error(`requestBody 에 content 가 없습니다.`)
@@ -126,7 +137,7 @@ module.exports = class OperationInfo {
 
     let typeStr
     for(const dataType in content){
-
+      
       typeStr = new ParamProperty(content[dataType], true)
       
       for(let im of typeStr.imports){

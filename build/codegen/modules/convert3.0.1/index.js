@@ -34,6 +34,14 @@ const filterTags = (tagName, codegenConfig)=>{
 
 }
 
+const makeClassName = (cls)=>{
+  let name = cls.className.endsWith('Controller')?cls.className.replace('Controller', 'Service'):cls.className+'Service'
+  if(name.includes(' ')){
+    name = name.replace(/ /g, '')
+  }
+  return name
+}
+
 module.exports = (json, paramMap) => {
 
   log('')
@@ -158,6 +166,10 @@ module.exports = (json, paramMap) => {
     let propertyInfo
     //model property 정보 구성 (model 에서 사용중인 import 정보 모으기)
     for(const modelName in schemas){
+
+      if(filterTags(modelName, codegenConfig)){
+        continue
+      }
       
       schemaInfo = schemas[modelName]
       
@@ -168,6 +180,9 @@ module.exports = (json, paramMap) => {
         propertyInfo = schemaInfo.properties[propertyName]
         propertyInfo.name = propertyName
         tempModelProperty = new ModelProperty(propertyInfo, schemaInfo.required)
+        if(tempModelProperty.noSupport){
+          continue
+        }
 
         for(let im of tempModelProperty.imports){
           usedModels.add(getModelImportString(im))
@@ -179,6 +194,10 @@ module.exports = (json, paramMap) => {
 
     let modelImportString
     for(const modelName in schemas){
+
+      if(filterTags(modelName, codegenConfig)){
+        continue
+      }
 
       modelImportString = getModelImportString(modelName)
 
@@ -200,6 +219,9 @@ module.exports = (json, paramMap) => {
         propertyInfo = schemaInfo.properties[propertyName]
         propertyInfo.name = propertyName
         tempModelProperty = new ModelProperty(propertyInfo, schemaInfo.required)
+        if(tempModelProperty.noSupport){
+          continue
+        }
 
         for(let im of tempModelProperty.imports){
           !schemaInfo.imports.includes(im) && schemaInfo.imports.push(im)
@@ -273,7 +295,7 @@ module.exports = (json, paramMap) => {
     //Injectable
     str += '@Injectable()\n'
 
-    const serviceClassName = val.className.endsWith('Controller')?val.className.replace('Controller', 'Service'):val.className+'Service'
+    const serviceClassName = makeClassName(val)
 
     //class start
     str += `export default class ${serviceClassName} {\n\n`

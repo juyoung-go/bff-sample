@@ -14,12 +14,13 @@ module.exports = class ParamProperty {
   }
   build(param, bodyFlag){
 
-    if(bodyFlag && !param.schema.type){
+    if((bodyFlag || param.schema.$ref) && !param.schema.type){
       param.schema.type = 'object'
     }
 
     let typeStr = typeMap.get(param.schema.type)
     if(typeStr === undefined){
+      console.log('typeStr',param, bodyFlag);
       throw new Error(`param type (${param.schema.type}) 은 지원하지 않습니다.`)
     }
 

@@ -10,6 +10,8 @@ module.exports = class ModelProperty {
 
   str = ''
 
+  noSupport = false
+
   constructor(propertyInfo, requiredList){
     this.name = propertyInfo.name
     this.required = requiredList && requiredList.includes(propertyInfo.name)
@@ -41,14 +43,25 @@ module.exports = class ModelProperty {
   buildSubType(info){
 
     const {schema} = info
-    const {items, additionalProperties} = schema
+    const {items, additionalProperties, properties} = schema
 
-    let target = items || additionalProperties || schema
+    let target = items || additionalProperties || properties || schema
+
+    if(properties){
+      this.noSupport = true
+      return
+    }
 
     if(!target.type && !target.$ref) {
       throw new Error(`Subtype 의 $ref 또는 type 항목은 필수입니다.`)
     }
-    
+
+    //type:object 인데 아무 속성도 없는경우
+    if(target.type && Object.getOwnPropertyNames(target).length === 1){
+      this.noSupport = true
+      return
+    }
+
     let out
     if(target.$ref){
 
@@ -66,6 +79,7 @@ module.exports = class ModelProperty {
 
         info.str = out + info.str
         info.schema = target
+        //console.log('info => ', info)
         this.buildSubType(info)
         
       }else if(out !== undefined){

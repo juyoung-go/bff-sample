@@ -104,6 +104,7 @@ module.exports = class OperationInfo {
 
     const params = []
     for(const param of this.parameters){
+      if(!this.validProperty(param)) continue
       params.push(param.name)
     }
     return params.join(', ')
@@ -137,7 +138,7 @@ module.exports = class OperationInfo {
 
     let typeStr
     for(const dataType in content){
-      
+
       typeStr = new ParamProperty(content[dataType], true)
       
       for(let im of typeStr.imports){

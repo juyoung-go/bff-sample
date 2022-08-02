@@ -181,10 +181,10 @@ module.exports = class OperationInfo {
     let returnVar = 'null'
     let callStr;
     if(this.methodName === 'get'){
-      callStr = StringUtil.inn(4, `const data = await axios.get(Remote + '${this.pathName}', {params:{${axiosParamString}}}) as ${responseType}\n`)
+      callStr = StringUtil.inn(4, `const data = await axios.get(Remote + \`${this.pathName.replace(/{/g, '${')}\`, {params:{${axiosParamString}}}) as ${responseType}\n`)
       returnVar = 'data'
     }else if(this.methodName === 'put' || this.methodName === 'post' || this.methodName === 'delete' || this.methodName === 'patch'){
-      callStr = StringUtil.inn(4, `const data = await axios.${this.methodName}(Remote + '${this.pathName}', ${axiosBodyData}) as ${responseType}\n`)
+      callStr = StringUtil.inn(4, `const data = await axios.${this.methodName}(Remote + \`${this.pathName.replace(/{/g, '${')}\`, ${axiosBodyData}, {params:{${axiosParamString}}}) as ${responseType}\n`)
       returnVar = 'data'
     }else{
       throw new Error(`${this.methodName} 는 지원되지 않는 메소드입니다.`)

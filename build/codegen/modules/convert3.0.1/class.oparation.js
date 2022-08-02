@@ -104,8 +104,9 @@ module.exports = class OperationInfo {
 
     const params = []
     for(const param of this.parameters){
-      if(!this.validProperty(param)) continue
-      params.push(param.name)
+      if(param.in === 'query'){
+        params.push(param.name)
+      }
     }
     return params.join(', ')
 
@@ -180,10 +181,10 @@ module.exports = class OperationInfo {
     //axios api 호출
     let returnVar = 'null'
     let callStr;
-    if(this.methodName === 'get'){
+    if(this.methodName === 'get' || this.methodName === 'delete'){
       callStr = StringUtil.inn(4, `const data = await axios.get(Remote + \`${this.pathName.replace(/{/g, '${')}\`, {params:{${axiosParamString}}}) as ${responseType}\n`)
       returnVar = 'data'
-    }else if(this.methodName === 'put' || this.methodName === 'post' || this.methodName === 'delete' || this.methodName === 'patch'){
+    }else if(this.methodName === 'put' || this.methodName === 'post' || this.methodName === 'patch'){
       callStr = StringUtil.inn(4, `const data = await axios.${this.methodName}(Remote + \`${this.pathName.replace(/{/g, '${')}\`, ${axiosBodyData}, {params:{${axiosParamString}}}) as ${responseType}\n`)
       returnVar = 'data'
     }else{
